@@ -4,8 +4,8 @@ import ReactMarkdown from "react-markdown";
 export default function App() {
   return (
     <div className="App">
-      <PageComponent />
-    </div>
+     <PageComponent /></div>
+  
   );
 }
 
