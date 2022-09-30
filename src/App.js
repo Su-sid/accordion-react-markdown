@@ -1,11 +1,17 @@
+import { Accordion, AccordionTab } from 'primereact/accordion';
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import React from 'react';
 
 export default function App() {
   return (
     <div className="App">
-     <PageComponent /></div>
-  
+     <Accordion>
+      <AccordionTab header="Header I">
+        <PageComponent/>
+      </AccordionTab>
+      </Accordion>
+    </div>
   );
 }
 
