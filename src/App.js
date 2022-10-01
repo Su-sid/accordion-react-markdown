@@ -1,32 +1,19 @@
+import 'primereact/resources/themes/lara-light-indigo/theme.css';
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
 import { Accordion, AccordionTab } from 'primereact/accordion';
-import { useEffect, useState } from "react";
-import ReactMarkdown from "react-markdown";
 import React from 'react';
+import PageContent from './PageContent';
 
 export default function App() {
   return (
-    <div className="App">
+
+    <div className="accordion-demo">
      <Accordion>
       <AccordionTab header="Header I">
-        <PageComponent/>
+        <PageContent/>
       </AccordionTab>
       </Accordion>
     </div>
   );
 }
-
-const PageComponent = () => {
-  const [content, setContent] = useState("");
-
-  useEffect(() => {
-    fetch("App.md")
-      .then((res) => res.text())
-      .then((text) => setContent(text));
-  }, []);
-
-  return (
-    <div className="post">
-      <ReactMarkdown children={content} />
-    </div>
-  );
-};

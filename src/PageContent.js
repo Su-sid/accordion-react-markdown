@@ -2,8 +2,8 @@ import React from 'react'
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 
-const PageContent = () => {
-    const [content, setContent] = useState("");
+export default function PageContent() {
+   const [content, setContent] = useState("");
 
     useEffect(() => {
       fetch("App.md")
@@ -17,4 +17,3 @@ const PageContent = () => {
   )
 }
 
-export default PageContent
