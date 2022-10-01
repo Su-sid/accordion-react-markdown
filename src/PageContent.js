@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 
 export default function PageContent() {
+
    const [content, setContent] = useState("");
 
     useEffect(() => {
@@ -10,9 +11,12 @@ export default function PageContent() {
         .then((res) => res.text())
         .then((text) => setContent(text));
     }, []);
+
   return (
     <div>
+
       <ReactMarkdown children={content}></ReactMarkdown>
+      
     </div>
   )
 }
